@@ -35,12 +35,15 @@
 
 </body>
 <script>
-    const items = document.getElementById("items").getElementsByTagName("li");
-    items[2].style.backgroundColor = "green";
+    const newItem = document.createElement('li');
+    newItem.textContent = "New item";
+    document.getElementById("items").appendChild(newItem);
+    const itemsWithClassName = document.getElementsByClassName('list-group-item');
+    const itemsByTagName = document.getElementById('items').getElementsByTagName('li');
 
-    for (let i = 0; i < items.length; i++) {
-        items[i].style.fontWeight = 'bold';
-    }
+    console.log(`Number of elements with class 'list-group-item': ${itemsWithClassName.length}`);
+
+    console.log(`Number of <li> elements within the list: ${itemsByTagName.length}`);
 </script>
 
 </html>
