@@ -32,18 +32,25 @@
             </ul>
         </div>
     </div>
+    <script>
+        // 1st task
+        var secondListItem = document.querySelector('#items li:nth-child(2)');
+        secondListItem.style.backgroundColor = 'green';
+        // 2nd task
+        var thirdListItem = document.querySelector('#items li:nth-child(3)');
+        thirdListItem.style.display = 'none';
 
+        var items = document.querySelectorAll('li');
+        // 3rd task
+        items[1].style.color = "green"
+
+        // 4th task
+        for (var i = 0; i < items.length; i++) {
+            if (i % 2 == 0) {
+                items[i].style.backgroundColor = "green";
+            }
+        }
+    </script>
 </body>
-<script>
-    const newItem = document.createElement('li');
-    newItem.textContent = "New item";
-    document.getElementById("items").appendChild(newItem);
-    const itemsWithClassName = document.getElementsByClassName('list-group-item');
-    const itemsByTagName = document.getElementById('items').getElementsByTagName('li');
-
-    console.log(`Number of elements with class 'list-group-item': ${itemsWithClassName.length}`);
-
-    console.log(`Number of <li> elements within the list: ${itemsByTagName.length}`);
-</script>
 
 </html>
