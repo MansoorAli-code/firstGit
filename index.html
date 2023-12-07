@@ -33,24 +33,56 @@
         </div>
     </div>
     <script>
-        // 1st task
-        var secondListItem = document.querySelector('#items li:nth-child(2)');
-        secondListItem.style.backgroundColor = 'green';
-        // 2nd task
-        var thirdListItem = document.querySelector('#items li:nth-child(3)');
-        thirdListItem.style.display = 'none';
+        var item_list = document.querySelector("#items")
+        //parentElement
+        item_list.parentElement.style.backgroundColor = "#f4f4f4"
 
-        var items = document.querySelectorAll('li');
-        // 3rd task
-        items[1].style.color = "green"
+        //lastelementchild
+        item_list.lastElementChild.style.backgroundColor = "red";
 
-        // 4th task
-        for (var i = 0; i < items.length; i++) {
-            if (i % 2 == 0) {
-                items[i].style.backgroundColor = "green";
-            }
-        }
+        //lastchild
+        console.log(item_list.lastChild)
+
+        //createchild
+        const newElement = document.createElement("li");
+        newElement.textContent = "Item 5"
+
+        //firstelementchild
+        item_list.firstElementChild.style.backgroundColor = "#f4f4f4"
+
+        //firstchild
+        console.log(item_list.firstChild)
+
+        //nextsibling
+        item_list.nextSibling.style.backgroundColor = "red";
+
+        //nextelementsibling
+        item_list.nextElementSibling.style.backgroundColor = "#f5f5f5"
+
+        //previoussibling
+        console.log(item_list.previousSibling);
+
+        console.log(item_list.previouselementsibling);
+        console.log(item_list.createelement);
+        console.log(item_list.setAttribute);
+        //cre
+        console.log(item_list.createtesxtnode);
+        //appendchild
+        item_list.appendChild(newElement);
+
+        const mainHeader = document.getElementById('main-header');
+        const helloBeforeLister = document.createElement('span');
+        helloBeforeLister.textContent = 'Hello ';
+        mainHeader.insertBefore(helloBeforeLister, mainHeader.firstElementChild);
+
+        const itemsList = document.getElementById('items');
+        const helloBeforeItem1 = document.createElement('li');
+        helloBeforeItem1.textContent = 'Hello Item 1';
+        itemsList.insertBefore(helloBeforeItem1, itemsList.firstElementChild);
+
+
     </script>
+
 </body>
 
 </html>
